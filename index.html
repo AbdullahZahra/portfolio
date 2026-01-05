@@ -4,180 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Zahra | Senior Media Buyer & Digital Growth Specialist</title>
+    <title>Abdullah Zahra | The Intersection of Tech, Growth, and Creativity</title>
     <meta name="description"
-        content="Abdullah Zahra: Senior Media Buyer & Digital Growth Specialist. Expert in Meta, TikTok, and LinkedIn Ads. Scaling revenue through data-driven strategies.">
+        content="Abdullah Zahra: Select a profile to view my specialized portfolios. Marketing, Engineering, & Creative.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Hub Specific Styles */
+        .hub-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hub-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-top: 4rem;
+        }
+
+        .hub-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hub-header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        .choice-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .choice-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .choice-icon {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .choice-card:hover .choice-icon {
+            transform: scale(1.1);
+        }
+
+        .choice-role {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .choice-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .choice-desc {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .choice-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .choice-btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+        }
+
+        .choice-btn-primary:hover {
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hub-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .hub-container {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="dark-theme">
     <div class="gradient-bg"></div>
 
-    <nav class="navbar glass">
-        <div class="container nav-container">
-            <a href="#" class="logo">Abdullah<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">Case Studies</a></li>
-                <li><a href="#contact" class="btn btn-primary">Book Consultation</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="container hero-content">
-                <span class="badge fade-in">Digital Growth Specialist</span>
-                <h1 class="fade-in-up">Scaling Brands through<br> <span class="gradient-text">Algorithms &
-                        Automation</span></h1>
-                <p class="subtitle fade-in-up delay-1">Mastering the technical side of Meta, TikTok, and LinkedIn ads.
-                    From FOSS-powered workflows to high-converting creative, I help businesses stop guessing and start
-                    scaling.</p>
-                <div class="cta-group fade-in-up delay-2">
-                    <a href="mailto:hello@abdullahzahra.com" class="btn btn-primary btn-lg">Start Scaling</a>
-                    <a href="#work" class="btn btn-secondary btn-lg">View Portfolio</a>
-                </div>
-            </div>
-        </section>
+        <div class="container hub-header reveal">
+            <h1>Abdullah Zahra<br><span class="gradient-text">The Intersection</span></h1>
+            <p>Select a profile to view my specialized portfolios.</p>
+        </div>
 
-        <!-- Services Section -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>My Tech Stack & Strategy</h2>
-                    <p>A holistic approach to digital growth.</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card glass">
-                        <i data-lucide="layers" class="icon"></i>
-                        <h3>Multi-Platform Strategy</h3>
-                        <p>Deep expertise in Meta, TikTok, and LinkedIn ads. I know which platform to pull to achieve
-                            specific revenue goals.</p>
-                    </div>
-                    <div class="service-card glass">
-                        <i data-lucide="pen-tool" class="icon"></i>
-                        <h3>Content & Creative</h3>
-                        <p>Producing engaging video assets and copy. I bridge the gap between "technical media buying"
-                            and "human storytelling."</p>
-                    </div>
-                    <div class="service-card glass">
-                        <i data-lucide="bar-chart-2" class="icon"></i>
-                        <h3>Open Source Analytics</h3>
-                        <p>Utilizing transparent, efficient FOSS workflows to analyze data, reduce waste, and optimize
-                            your budget better than standard agencies.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container about-grid">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>I sit at the intersection of Digital Marketing and Open Source Technology. I don't just run ads;
-                        I build data-driven growth systems. By leveraging technical analytics and FOSS tools, I engineer
-                        campaigns that stop guessing and start scaling—delivering consistent revenue across Meta,
+        <div class="hub-container">
+            <!-- Choice A: Marketing -->
+            <div class="choice-card reveal delay-1">
+                <div>
+                    <div class="choice-icon"><i data-lucide="trending-up" size="48"></i></div>
+                    <div class="choice-role">The Marketing Specialist</div>
+                    <h2 class="choice-title">Growth Engineer</h2>
+                    <p class="choice-desc">Scaling revenue to 1.5M+ EGP/month through algorithmic media buying on Meta,
                         TikTok, and LinkedIn.</p>
-                    <a href="https://www.linkedin.com/in/abdullahzahra/" target="_blank" class="linkedin-link">
-                        <i data-lucide="linkedin"></i> Connect on LinkedIn
-                    </a>
                 </div>
-                <div class="stats-grid">
-                    <div class="stat-card glass">
-                        <span class="stat-number">1.5M+</span>
-                        <span class="stat-label">EGP Sales Generated</span>
-                    </div>
-                    <div class="stat-card glass">
-                        <span class="stat-number">2.4k+</span>
-                        <span class="stat-label">Conversions (TikTok)</span>
-                    </div>
-                </div>
+                <a href="/marketing.html" class="choice-btn choice-btn-primary">View Growth Portfolio</a>
             </div>
-        </section>
 
-        <!-- Case Studies / Results -->
-        <section id="work" class="work-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Proven Results</h2>
-                    <p>Real data from active campaigns.</p>
+            <!-- Choice B: Engineering -->
+            <div class="choice-card reveal delay-2">
+                <div>
+                    <div class="choice-icon"><i data-lucide="terminal-square" size="48"></i></div>
+                    <div class="choice-role">The Engineer</div>
+                    <h2 class="choice-title">FOSS & Systems</h2>
+                    <p class="choice-desc">Optimizing workflows with Linux, Open Source tools, and system automation. I
+                        build the tech that powers the growth.</p>
                 </div>
-                <div class="results-grid">
-                    <div class="result-item glass">
-                        <div class="result-header">
-                            <h3>Educational Sector Success</h3>
-                            <span class="tag">High Volume</span>
-                        </div>
-                        <p class="result-stat">1.5 Million EGP</p>
-                        <p class="result-desc">Sales for a single educational program.</p>
-                        <small>Total recent sales approaching 1.8M EGP.</small>
-                    </div>
-                    <div class="result-item glass">
-                        <div class="result-header">
-                            <h3>Multi-Platform Mastery</h3>
-                            <span class="tag">TikTok & LinkedIn</span>
-                        </div>
-                        <p class="result-stat">2,400+ Leads</p>
-                        <p class="result-desc">Generated in late 2025 on TikTok. High engagement brand awareness on
-                            LinkedIn.</p>
-                    </div>
-                    <div class="result-item glass">
-                        <div class="result-header">
-                            <h3>Cost Optimization</h3>
-                            <span class="tag">Efficiency</span>
-                        </div>
-                        <p class="result-stat">80-90 EGP</p>
-                        <p class="result-desc">Cost Per Lead on competitive platforms.</p>
-                    </div>
-                    <div class="result-item glass">
-                        <div class="result-header">
-                            <h3>Other Businesses</h3>
-                            <span class="tag">Diverse</span>
-                        </div>
-                        <p class="result-stat">550,000 EGP</p>
-                        <p class="result-desc">Sales generated across diverse industries including SaaS and Real Estate.
-                        </p>
-                    </div>
-                </div>
+                <a href="/engineering.html" class="choice-btn choice-btn-primary">View Engineering</a>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container contact-container">
-                <div class="contact-content glass">
-                    <h2>Ready to Scale?</h2>
-                    <p>Let's discuss how we can drive growth for your business.</p>
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" required placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required placeholder="your@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" required placeholder="Tell me about your project..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
+            <!-- Choice C: Creative -->
+            <div class="choice-card reveal delay-3">
+                <div>
+                    <div class="choice-icon"><i data-lucide="clapperboard" size="48"></i></div>
+                    <div class="choice-role">The Content Creator</div>
+                    <h2 class="choice-title">Creative Producer</h2>
+                    <p class="choice-desc">Bridging the gap between technical data and human storytelling through video
+                        editing and content strategy.</p>
                 </div>
+                <a href="/creative.html" class="choice-btn choice-btn-primary">View Creative</a>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Abdullah Zahra. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="/" class="logo">Abdullah<span>.</span></a>
+                    <p style="margin-top: 1rem;">Bridging the gap between technical data, algorithmic growth, and human
+                        storytelling.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <div class="footer-nav">
+                        <a href="/">Home</a>
+                        <a href="/marketing.html">Growth & Marketing</a>
+                        <a href="/engineering.html">Engineering & FOSS</a>
+                        <a href="/creative.html">Creative & Content</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="footer-nav">
+                        <a href="mailto:hello@abdullahzahra.com">hello@abdullahzahra.com</a>
+                        <a href="https://www.linkedin.com/in/abdullahzahra/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Abdullah Zahra. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/AbdullahZahra" target="_blank" class="social-link"><i
+                            data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/abdullahzahra/" target="_blank" class="social-link"><i
+                            data-lucide="linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 

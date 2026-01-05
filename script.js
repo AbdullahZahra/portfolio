@@ -25,34 +25,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll animation observer
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); // Only animate once
             }
         });
     }, observerOptions);
 
-    // Add animation classes to elements
-    document.querySelectorAll('.service-card, .result-item, .stat-card').forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.6s ease-out';
-        el.style.transitionDelay = `${index * 0.1}s`;
+    // Observe all elements with .reveal class
+    document.querySelectorAll('.reveal, .stagger-container').forEach(el => {
         observer.observe(el);
     });
 
-    // Make elements visible when intersected
-    document.addEventListener('scroll', () => {
-        document.querySelectorAll('.service-card, .result-item, .stat-card').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            }
+    // 3D Tilt Effect
+    document.querySelectorAll('.choice-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -5; // Max 5deg rotation
+            const rotateY = ((x - centerX) / centerX) * 5;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
         });
     });
 });
